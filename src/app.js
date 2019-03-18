@@ -3,7 +3,9 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode.js')
 const forcast = require('./utils/forecast.js')
-const app = express();
+
+const app = express()
+const port = process.env.PORT || 3000 
 
 // define paths for express config
 const publicDirectoryPath = path.join(__dirname,'../puclic')
@@ -94,6 +96,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000, ()=>{
-    console.log('server is on on port 3000');
+app.listen(port, ()=>{
+    console.log('server is on on port '+ port);
 })

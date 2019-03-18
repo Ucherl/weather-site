@@ -64,12 +64,6 @@ app.get('/weather',(req,res)=>{
             })
         })
     })
-
-    //res.send({
-    //    forcast: 'hot',
-    //    location: 'taipei',
-    //    address: req.query.address
-    //})
 })
 
 app.get('/products',(req,res)=>{
